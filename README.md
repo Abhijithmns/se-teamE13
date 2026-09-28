@@ -91,3 +91,66 @@ The **Hospital Management System (HMS)** addresses these challenges by offering 
 | **NFR1** | Response time < 2s | High | `All Core Modules` | `TC09` | Planned |
 | **NFR2** | Data persistence across sessions | High | `File I/O Module` | `TC10` | Planned |
 | **NFR5** | Comprehensive input validation | High | `Validation Module` | `TC11` | Planned |
+
+## 📐 6. System Architecture & Module Breakdown
+
+The Hospital Management System follows a decoupled, modular design to ensure high maintainability, testability, and adherence to clean software engineering practices.
+
+
+                           +---------------------------+
+                           |     Main Menu / CLI       |
+                           +-------------+-------------+
+                                         |
+         +-------------------------------+-------------------------------+
+         |                               |                               |
++--------v---------+           +---------v--------+           +----------v--------+
+|  Patient Module  |           | Appointment Mod. |           |   Doctor Module   |
++--------+---------+           +---------+--------+           +----------+--------+
+         |                               |                               |
+         +-------------------------------+-------------------------------+
+                                         |
+                     +-------------------+-------------------+
+                     |                                       |
+           +---------v---------+                   +---------v---------+
+           | Validation Module |                   |  File I/O Module  |
+           +-------------------+                   +---------+---------+
+                                                             |
+                                                   +---------v---------+
+                                                   | Local Storage Files|
+                                                   | (.txt / .csv / db)|
+                                                   +-------------------+
+
+
+### Module Descriptions
+- *Patient Module*: Manages the patient lifecycle including registration, record modifications, record deletion, and search by ID or name.
+- *Appointment Module*: Handles scheduling consultations, tracking doctor-patient mappings, slot cancellations, and patient visit histories.
+- *Doctor Module*: Manages physician rosters, weekly schedules, department specializations, and consultation queue tracking.
+- *File I/O & Persistence Module*: Encapsulates disk serialization and deserialization, ensuring crash-safe persistence between program runs.
+- *Validation Module*: Centralized defensive input checking (e.g., verifying age boundaries, valid phone numbers, non-empty text fields, and duplicate key prevention).
+
+---
+---
+
+## 🖼️ 7. Use Case & UML Modeling
+
+The system architecture and actor interactions are documented in the [docs/uml.drawio](docs/uml.drawio) model:
+
+![UML Diagram](docs/uml.drawio.png)
+
+### Actor-Use Case Mappings
+
+#### *Admin / Receptionist*
+- UC-01: Register Patient
+- UC-02: Edit / Delete Patient Record
+- UC-03: Search Patient
+- UC-04: Book / Cancel Appointment
+
+#### *Doctor*
+- UC-05: View Doctor Availability
+- UC-06: View Appointment History / Assigned Consultations
+
+#### *System*
+- Save & Load Data from Local File Storage
+- Run Input Validation on Transactions
+
+---
