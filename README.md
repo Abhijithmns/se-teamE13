@@ -33,7 +33,7 @@ The **Hospital Management System (HMS)** addresses these challenges by offering 
 
 ---
 
-## 📋 3. Software Requirements Specification 
+## 📋 3. Software Requirements Specification (srs)
 
 1. **SRS-01 (Patient Onboarding):** The system shall allow administrators to register new patients with mandatory attributes (Patient ID, Full Name, Age, Gender, Contact Number, and Pre-existing Condition/Disease).
 2. **SRS-02 (Record Modification):** The system shall allow authorized staff to update and edit existing patient contact and medical records.
