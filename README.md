@@ -43,6 +43,18 @@ All system architecture and design diagrams are located in [`docs/diagrams/`](fi
 | **Sequence: Appointment Booking** | [`docs/Architecture_and_Design.md`](file:///home/abhijith/pes/sem5/se/docs/Architecture_and_Design.md) | [View PNG](file:///home/abhijith/pes/sem5/se/docs/diagrams/sequence_diagram_booking.drawio.png) | [`sequence_diagram_booking.drawio`](file:///home/abhijith/pes/sem5/se/docs/diagrams/sequence_diagram_booking.drawio) |
 | **Sequence: Doctor Consultation** | [`docs/Architecture_and_Design.md`](file:///home/abhijith/pes/sem5/se/docs/Architecture_and_Design.md) | [View PNG](file:///home/abhijith/pes/sem5/se/docs/diagrams/sequence_diagram_consultation.drawio.png) | [`sequence_diagram_consultation.drawio`](file:///home/abhijith/pes/sem5/se/docs/diagrams/sequence_diagram_consultation.drawio) |
 
+## System Overview
+The HMS supports <actors> for <core modules, e.g. appointments,
+consultations, billing, records>.
+
+## Requirement Coverage Summary
+| Deliverable | Coverage |
+|-------------|----------|
+| SRS security | <n> objectives, <n> requirements |
+| Test cases | <n> total: <n> functional, <n> non-functional |
+| Sequence diagrams | 2 (Booking, Consultation) |
+| Traceability | SRS → Test Plan (RTM); SRS → Architecture (Section <x>) |
+
 ---
 
 ## Project Directory Layout
