@@ -1,0 +1,95 @@
+<mxfile host="app.diagrams.net" modified="2026-09-29T11:42:00.000Z" agent="Mozilla/5.0" version="21.6.8" type="device">
+  <diagram id="hms_component_bw" name="HMS Component Diagram (Monochrome)">
+    <mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" background="#ffffff" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <!-- Presentation Layer -->
+        <mxCell id="box_pres" value="Presentation Tier (Client Layer)" style="shape=rect;rounded=0;whiteSpace=wrap;html=1;verticalAlign=top;fontStyle=1;fontSize=13;fontColor=#000000;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1.5;spacingTop=8;" vertex="1" parent="1">
+          <mxGeometry x="80" y="40" width="800" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="c_spa" value="«component»&#xa;Web Portal SPA&#xa;(React / TypeScript)" style="html=1;dropTarget=0;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1.5;fontColor=#000000;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="140" y="70" width="180" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="c_mobile" value="«component»&#xa;Mobile Responsive Client&#xa;(Patient / Staff Web)" style="html=1;dropTarget=0;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1.5;fontColor=#000000;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="540" y="70" width="190" height="50" as="geometry" />
+        </mxCell>
+
+        <!-- Gateway Layer -->
+        <mxCell id="box_gw" value="Ingress &amp; Security Layer" style="shape=rect;rounded=0;whiteSpace=wrap;html=1;verticalAlign=top;fontStyle=1;fontSize=13;fontColor=#000000;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1.5;spacingTop=8;" vertex="1" parent="1">
+          <mxGeometry x="80" y="170" width="800" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="c_gw" value="«component»&#xa;API Gateway&#xa;(Reverse Proxy / Rate Limiter)" style="html=1;dropTarget=0;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1.5;fontColor=#000000;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="170" y="200" width="220" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="c_jwt" value="«component»&#xa;Security Filter&#xa;(JWT Auth &amp; RBAC Guard)" style="html=1;dropTarget=0;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1.5;fontColor=#000000;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="510" y="200" width="220" height="50" as="geometry" />
+        </mxCell>
+
+        <!-- Application Core Tier -->
+        <mxCell id="box_app" value="Business Logic &amp; Domain Services Tier" style="shape=rect;rounded=0;whiteSpace=wrap;html=1;verticalAlign=top;fontStyle=1;fontSize=13;fontColor=#000000;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1.5;spacingTop=8;" vertex="1" parent="1">
+          <mxGeometry x="80" y="300" width="800" height="260" as="geometry" />
+        </mxCell>
+
+        <mxCell id="c_auth" value="«component»&#xa;Auth &amp; Identity&#xa;Service" style="html=1;dropTarget=0;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1.5;fontColor=#000000;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="110" y="340" width="140" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="c_pat" value="«component»&#xa;Patient Management&#xa;Service" style="html=1;dropTarget=0;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1.5;fontColor=#000000;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="270" y="340" width="150" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="c_appt" value="«component»&#xa;Appointment &amp; Slot&#xa;Scheduler" style="html=1;dropTarget=0;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1.5;fontColor=#000000;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="440" y="340" width="150" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="c_ehr" value="«component»&#xa;EHR &amp; Clinical&#xa;Notes Service" style="html=1;dropTarget=0;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1.5;fontColor=#000000;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="610" y="340" width="150" height="60" as="geometry" />
+        </mxCell>
+
+        <mxCell id="c_bill" value="«component»&#xa;Billing &amp; Invoicing&#xa;Engine" style="html=1;dropTarget=0;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1.5;fontColor=#000000;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="180" y="440" width="150" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="c_pharm" value="«component»&#xa;Pharmacy Inventory&#xa;Service" style="html=1;dropTarget=0;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1.5;fontColor=#000000;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="360" y="440" width="150" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="c_audit" value="«component»&#xa;Immutable Audit&#xa;Logger" style="html=1;dropTarget=0;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1.5;fontColor=#000000;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="540" y="440" width="150" height="60" as="geometry" />
+        </mxCell>
+
+        <!-- Persistence Layer -->
+        <mxCell id="box_data" value="Data Persistence Tier" style="shape=rect;rounded=0;whiteSpace=wrap;html=1;verticalAlign=top;fontStyle=1;fontSize=13;fontColor=#000000;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1.5;spacingTop=8;" vertex="1" parent="1">
+          <mxGeometry x="80" y="600" width="800" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="c_db" value="«database»&#xa;PostgreSQL 15+&#xa;(Relational / Encrypted)" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=12;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1.5;fontColor=#000000;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="220" y="625" width="220" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="c_redis" value="«cache»&#xa;Redis Cache&#xa;(Slot Locks &amp; Sessions)" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=12;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1.5;fontColor=#000000;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="540" y="625" width="200" height="70" as="geometry" />
+        </mxCell>
+
+        <!-- Connections -->
+        <mxCell id="edge_c1" style="endArrow=classic;html=1;strokeColor=#000000;strokeWidth=1.2;exitX=0.5;exitY=1;entryX=0.3;entryY=0;" edge="1" source="c_spa" target="c_gw" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge_c2" style="endArrow=classic;html=1;strokeColor=#000000;strokeWidth=1.2;exitX=0.5;exitY=1;entryX=0.7;entryY=0;" edge="1" source="c_mobile" target="c_gw" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge_c3" style="endArrow=classic;html=1;strokeColor=#000000;strokeWidth=1.2;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" source="c_gw" target="c_jwt" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge_c4" style="endArrow=classic;html=1;strokeColor=#000000;strokeWidth=1.2;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" source="c_jwt" target="c_appt" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge_c5" style="endArrow=classic;startArrow=classic;html=1;strokeColor=#000000;strokeWidth=1.2;exitX=0.8;exitY=1;entryX=0.3;entryY=0;" edge="1" source="c_appt" target="c_redis" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge_c6" style="endArrow=classic;html=1;strokeColor=#000000;strokeWidth=1.2;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" source="c_bill" target="c_db" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge_c7" style="endArrow=classic;html=1;strokeColor=#000000;strokeWidth=1.2;exitX=0.5;exitY=1;entryX=0.7;entryY=0;" edge="1" source="c_pharm" target="c_db" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
