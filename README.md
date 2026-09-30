@@ -76,3 +76,9 @@ consultations, billing, records>.
 ├── SE_Mini_Project_Delivereables_Part-1.pdf # Course Rubric & Deliverables Definition
 └── README.md                               # Project Overview & Index
 ```
+
+## Team Members
+- Likith Adithya (PES1UG24CS250)
+- M Naga Sai Abhijith (PES1UG24CS252)
+- Mahilan (PES1UG24CS256)
+- Madhav Vinod (PES1UG24CS254)
